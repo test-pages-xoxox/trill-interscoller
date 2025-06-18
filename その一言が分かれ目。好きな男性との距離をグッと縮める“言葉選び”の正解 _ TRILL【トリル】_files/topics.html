@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!-- saved from url=(0098)https://widgets.outbrain.com/nanoWidget/externals/topics/topics.html?r=https%3A%2F%2Ftrilltrill.jp -->
+<html lang="en"><script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/extend-native-history-api.js"></script><script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/requests.js"></script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Outbrain Topics Frame</title>
+    <script>
+      (async () => {
+        const { featurePolicy } = document;
+        if ('browsingTopics' in document && featurePolicy && featurePolicy['allowsFeature']('browsing-topics'))
+          try {
+            const params = new URLSearchParams(window.location.search);
+            const referrer = params.get('r');
+            const topics = await document.browsingTopics();
+            topics.length && parent.postMessage(topics, referrer);
+          } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body __processed_e301164d-34b5-4cfc-99a9-30981ca05c74__="true">
+    <div></div>
+  
+
+<div id="professor_prebid-root"></div></body></html>
